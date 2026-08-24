@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FADD Studio | Luxury Architecture & Interior Design, Bangalore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        .gradient-luxury { background: linear-gradient(135deg, #1a1a1a 0%, #333 100%); }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+    <!-- Urgency Bar -->
+    <div class="bg-stone-900 text-stone-200 text-xs py-2 px-4 text-center">
+        <span class="font-medium">★ 4.9/5 Rating (120+ Verified Reviews)</span> — Designing Bangalore's most prestigious spaces. 
+        <a href="#contact" class="underline ml-2">Book a Consultation Today</a>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-stone-200">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-extrabold tracking-tighter">FADD<span class="text-amber-700">STUDIO</span></div>
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#services" class="hover:text-amber-700 transition">Services</a>
+                <a href="#why" class="hover:text-amber-700 transition">Our Approach</a>
+                <a href="#contact" class="hover:text-amber-700 transition">Contact</a>
+            </div>
+            <a href="#booking" class="bg-stone-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-amber-700 transition">Book Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full text-amber-800 text-sm font-semibold mb-6">
+                <span>Verified 4.9★ Excellence</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">Redefining Luxury Through <span class="text-amber-700">Architecture</span></h1>
+            <p class="text-lg text-stone-600 mb-8 max-w-lg">FADD Studio delivers bespoke interior design and architectural solutions in Indiranagar, Bangalore. Elevate your living standards with our award-winning design philosophy.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#booking" class="bg-amber-700 text-white px-8 py-4 rounded font-bold hover:bg-stone-900 transition">Request a Quote</a>
+                <a href="https://wa.me/919900291900?text=Hello FADD Studio, I want to inquire about your services." class="border border-stone-300 px-8 py-4 rounded font-bold hover:border-stone-900 transition">WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="relative bg-stone-200 h-96 rounded-2xl flex items-end p-8 shadow-2xl">
+            <div class="bg-white p-6 rounded-xl w-full shadow-lg">
+                <p class="text-sm uppercase tracking-widest text-stone-500 font-bold mb-2">Project Success Rate</p>
+                <div class="text-4xl font-bold">100% Client Satisfaction</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">Tailored Design Solutions</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                    {t: 'Signature Consultation', d: 'Strategic design roadmap and concept evolution.'},
+                    {t: 'Turnaround Package', d: 'Full implementation from blueprint to install.'},
+                    {t: 'Enterprise Care', d: 'Specialized solutions for luxury commercial spaces.'},
+                    {t: 'VIP 24/7 Support', d: 'Dedicated project management at your beck and call.'}
+                ].map(s => (
+                    <div class="border p-8 rounded-lg hover:border-amber-600 transition group cursor-default">
+                        <div class="w-12 h-12 bg-stone-100 mb-6 rounded-lg group-hover:bg-amber-50"></div>
+                        <h3 class="text-xl font-bold mb-3">{s.t}</h3>
+                        <p class="text-stone-600 text-sm">{s.d}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-20 max-w-4xl mx-auto px-6">
+        <div class="bg-stone-900 text-white p-10 md:p-16 rounded-2xl">
+            <h2 class="text-3xl font-bold mb-2">Start Your Project Today</h2>
+            <p class="text-stone-400 mb-8">Fill in the details below and our lead designer will reach out within 24 hours.</p>
+            <form id="contactForm" class="grid md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Your Name" required class="bg-stone-800 p-4 rounded w-full border border-stone-700 outline-none focus:border-amber-500">
+                <input type="email" placeholder="Email Address" required class="bg-stone-800 p-4 rounded w-full border border-stone-700 outline-none focus:border-amber-500">
+                <textarea placeholder="Tell us about your project" class="bg-stone-800 p-4 rounded w-full border border-stone-700 outline-none focus:border-amber-500 md:col-span-2 h-32"></textarea>
+                <button type="submit" class="bg-amber-700 text-white py-4 px-8 rounded font-bold hover:bg-white hover:text-stone-900 transition">Submit Inquiry</button>
+            </form>
+            <div id="confirmation" class="hidden mt-6 p-4 bg-emerald-900 border border-emerald-700 text-emerald-100 rounded text-center">
+                Thank you! Your vision has been received. Our team will contact you shortly.
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="faq-item border-b pb-4">
+                <button class="flex justify-between w-full text-left font-bold py-2 outline-none" onclick="toggleFaq(this)">Where are you located? <span>+</span></button>
+                <p class="hidden pt-2 text-stone-600">We are conveniently located in the heart of Indiranagar, Bangalore.</p>
+            </div>
+            <div class="faq-item border-b pb-4">
+                <button class="flex justify-between w-full text-left font-bold py-2 outline-none" onclick="toggleFaq(this)">Do you offer virtual consultations? <span>+</span></button>
+                <p class="hidden pt-2 text-stone-600">Yes, we provide high-end virtual design strategy sessions via secure digital portals.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-100 py-12 px-6 text-center text-sm text-stone-500">
+        <p class="mb-4 font-bold text-stone-900 uppercase tracking-widest">FADD Studio</p>
+        <p>Indiranagar, Bangalore | Phone: +91 99002 91900 | contact@faddstudio.com</p>
+        <p class="mt-4">&copy; 2023 FADD Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('confirmation').classList.remove('hidden');
+        });
+
+        // FAQ Toggle
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            content.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
